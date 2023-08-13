@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Inter, Poppins } from "next/font/google";
+import MainLayout from "@/components/layouts/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -8,5 +9,9 @@ const poppins = Poppins({
 });
 
 export default function Home() {
-  return <main className={poppins.className}>Hi</main>;
+  return (
+    <main className={poppins.className}>
+      <MainLayout>Hi</MainLayout>
+    </main>
+  );
 }
